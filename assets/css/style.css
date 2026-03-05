@@ -1,7 +1,20 @@
-/* =============================
-   ESTILOS GENERALES
-============================= */
-body {
+/* ===================================
+   CARGA DE FUENTES
+=================================== */
+
+/* Perfumerie Script Pro: solo si tienes el archivo local */
+@font-face {
+    font-family: 'Perfumerie Script Pro';
+    src: url('../fonts/PerfumerieScriptPro.woff2') format('woff2'),
+         url('../fonts/PerfumerieScriptPro.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* ===================================
+     ESTILOS GENERALES
+  =================================== */
+  body {
     margin: 0;
     background: #000000;
     color: #F5F3EF;
@@ -10,45 +23,44 @@ body {
     align-items: center;
     height: 100vh;
     text-align: center;
-    font-family: 'Montserrat', sans-serif; /* Fuente principal para párrafos */
+    font-family: 'Montserrat', sans-serif; /* Fuente para párrafos */
   }
   
-  /* =============================
+  /* ===================================
      CONTENEDOR
-  ============================= */
+  =================================== */
   .container {
     max-width: 700px;
     padding: 20px;
   }
   
-  /* =============================
-     NOMBRES / TÍTULO PRINCIPAL
-  ============================= */
+  /* ===================================
+     TÍTULO / NOMBRES
+  =================================== */
   h1 {
-    font-family: 'Playfair Display', serif; /* Elegante para bodas */
+    font-family: 'Perfumerie Script Pro', cursive; /* Elegante y romántico */
     font-size: 4rem;
-    font-weight: normal;
-    margin-bottom: 30px;
     color: #F5F3EF;
+    margin-bottom: 30px;
     line-height: 1.2;
   }
   
-  /* =============================
+  /* ===================================
      CUENTA REGRESIVA
-  ============================= */
+  =================================== */
   #countdown {
-    font-family: 'Marcellus', serif; /* Sobria y elegante */
+    font-family: 'Marcellus', serif;
     font-size: 1.4rem;
     letter-spacing: 4px;
     color: #C6A75E;
     margin-bottom: 40px;
   }
   
-  /* =============================
+  /* ===================================
      MENSAJE
-  ============================= */
+  =================================== */
   .message {
-    font-family: 'Perfumerie Script Pro', serif; /* Elegante pero legible */
+    font-family: 'Montserrat', sans-serif; /* Legible y elegante */
     font-size: 1rem;
     line-height: 1.8;
     opacity: 0.85;
@@ -56,9 +68,9 @@ body {
     margin: 0 auto;
   }
   
-  /* =============================
+  /* ===================================
      BOTÓN
-  ============================= */
+  =================================== */
   #enterBtn {
     margin-top: 50px;
     padding: 14px 35px;
@@ -66,11 +78,11 @@ body {
     color: #C6A75E;
     border: 1px solid #C6A75E;
     cursor: pointer;
-    font-family: 'Marcellus', serif; /* Coordina con la cuenta regresiva */
+    font-family: 'Marcellus', serif;
     font-size: 0.9rem;
     letter-spacing: 2px;
-    display: none; /* Mostrar solo cuando corresponda */
-    transition: 0.3s ease;
+    display: none;
+    transition: 0.3s ease, transform 0.3s ease;
   }
   
   #enterBtn:hover {
@@ -79,9 +91,9 @@ body {
     transform: scale(1.05);
   }
   
-  /* =============================
+  /* ===================================
      RESPONSIVE / MÓVILES
-  ============================= */
+  =================================== */
   @media screen and (max-width: 480px) {
     h1 {
       font-size: 2.5rem;
@@ -101,3 +113,12 @@ body {
       font-size: 0.85rem;
     }
   }
+  
+  /* ===================================
+     OPCIONAL: si no tienes Perfumerie Script Pro
+  =================================== */
+  /* 
+  h1 {
+    font-family: 'Great Vibes', cursive;
+  }
+  */

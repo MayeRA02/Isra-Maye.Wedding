@@ -38,6 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+document.getElementById('enterBtn').addEventListener('click', () => {
+  document.getElementById('bg-music').play();
+});
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
     const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
     const minutes = Math.floor((difference / (1000 * 60)) % 60);

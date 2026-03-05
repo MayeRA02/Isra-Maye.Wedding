@@ -4,14 +4,13 @@
   <meta charset="UTF-8">
   <title>Israel & Mayersi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Isra & Maye — Un Pacto Delante de Dios</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
  <div class="container">
   <!-- Partículas de luz -->
   <canvas id="bokeh"></canvas>
-  <div class="light-flares"></div>
+  <div class="overlay"></div>
 
   <!-- Overlay elegante / panel central -->
   <div class="overlay-panel">
@@ -39,8 +38,9 @@
 
   <audio autoplay loop id="bg-music">
     <source src="assets/audio/The Cinematic Orchestra - To Build a Home - Lyrics.mp3" type="audio/mp3">
+    <audio id="bg-music" loop></audio>
   </audio>
-
+  
   <script src="assets/js/countdown.js"></script>
   <script src="assets/js/bokeh.js"></script>
   <script src="assets/js/light-flares.js"></script>

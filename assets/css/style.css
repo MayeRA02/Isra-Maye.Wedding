@@ -31,7 +31,7 @@ body, html {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    background: url('../images/iglesia-blur.jpg') center center/cover no-repeat;
+    background: url('../images/iglesia-blur.jpeg') center center/cover no-repeat;
 }
 
 /* Canvas de partículas bokeh */

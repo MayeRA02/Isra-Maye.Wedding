@@ -4,7 +4,7 @@
 
 /* Perfumerie Script Pro: solo si tienes el archivo local */
 @font-face {
-    font-family: 'Perfumerie Script Pro';
+    font-family: 'Parfumerie Script Pro';
     src: url('assets/fonts/ParfumerieScriptPro.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -37,7 +37,7 @@
      TÍTULO / NOMBRES
   =================================== */
   h1 {
-    font-family: 'Perfumerie Script Pro', cursive;
+    font-family: 'Parfumerie Script Pro', cursive;
     font-size: 3rem; 
     color: #ffffff;
     text-align: center;

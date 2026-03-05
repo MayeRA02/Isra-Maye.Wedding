@@ -4,29 +4,45 @@
   <meta charset="UTF-8">
   <title>Israel & Mayersi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- FUENTES GOOGLE FONTS -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Marcellus&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <!-- CSS principal -->
+  <title>Isra & Maye — Un Pacto Delante de Dios</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <div class="container">
+ <div class="container">
+  <!-- Partículas de luz -->
+  <canvas id="bokeh"></canvas>
+  <div class="light-flares"></div>
+
+  <!-- Overlay elegante / panel central -->
+  <div class="overlay-panel">
     <h1>Israel & Mayersi</h1>
+    <p class="intro-text">
+      Hemos decidido celebrar nuestro matrimonio de manera íntima.<br>
+      Sin embargo, hemos preparado esta experiencia digital<br>
+      para que puedas ser testigo de nuestro pacto delante de Dios.<br>
+      Esta será nuestra ceremonia virtual.
+    </p>
 
-    <div id="countdown"></div>
-
-    <div class="message">
-      Nuestra boda será una experiencia virtual cuidadosamente preparada.
-      Aunque no todos podrán estar físicamente presentes,
-      deseamos que cada uno se sienta parte de este momento sagrado.
+    <div class="countdown">
+      <p>La ceremonia comienza en…</p>
+      <div class="timer">
+        <span id="days">00</span> Días
+        <span id="hours">00</span> Horas
+        <span id="minutes">00</span> Minutos
+        <span id="seconds">00</span> Segundos
+      </div>
     </div>
 
     <button id="enterBtn">Comenzar ceremonia</button>
   </div>
+</div>
 
-  <!-- JS principal -->
-  <script src="assets/js/script.js"></script>
+  <audio autoplay loop id="bg-music">
+    <source src="assets/audio/The Cinematic Orchestra - To Build a Home - Lyrics.mp3" type="audio/mp3">
+  </audio>
+
+  <script src="assets/js/countdown.js"></script>
+  <script src="assets/js/bokeh.js"></script>
+  <script src="assets/js/light-flares.js"></script>
 </body>
 </html>

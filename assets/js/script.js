@@ -73,7 +73,7 @@ function updateCountdown() {
 
   setInterval(updateCountdown, 1000);
   updateCountdown();
-});
+
 document.addEventListener('DOMContentLoaded', () => {
   // Fecha del evento
   const weddingDate = new Date("2026-07-20T18:00:00");

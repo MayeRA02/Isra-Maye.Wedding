@@ -6,8 +6,10 @@
 @font-face {
     font-family: 'Parfumerie Script Pro';
     src: url('../fonts/ParfumerieScriptPro.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+     font-size: 6rem;   /* más grande */
+     color: #ffffff;
+     text-align: center;font-weight: normal;
+     font-style: normal;
 }
 
   /* ===================================

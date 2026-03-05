@@ -1,7 +1,6 @@
-
-
-
-/* Perfumerie Script Pro: solo si tienes el archivo local */
+/* ===================================
+   CARGA DE FUENTES
+=================================== */
 @font-face {
     font-family: 'Parfumerie Script Pro';
     src: url('../fonts/ParfumerieScriptPro.ttf') format('truetype');
@@ -9,7 +8,6 @@
     font-style: normal;
 }
 
-/* Fuentes adicionales */
 @font-face {
     font-family: 'Marcellus';
     src: url('../fonts/Marcellus-Regular.ttf') format('truetype');
@@ -47,7 +45,7 @@ body, html {
     z-index: 1;
 }
 
-/* Overlay elegante con marco dorado y gradiente */
+/* Overlay elegante con marco sutil y gradiente suave */
 .overlay {
     position: absolute;
     top: 50%;
@@ -56,39 +54,30 @@ body, html {
     text-align: center;
     padding: 3rem 4rem;
     border-radius: 2rem;
-    border: 2px solid rgba(198,167,94,0.3);
-    background: rgba(0,0,0,0.45) radial-gradient(circle at top left, rgba(198,167,94,0.05), rgba(0,0,0,0.45));
+    border: 1px solid rgba(255,255,255,0.1); /* sutil */
+    background: rgba(0,0,0,0.45);
     box-shadow:
-        0 0 60px rgba(198,167,94,0.2),
-        0 0 120px rgba(255, 228, 214, 0.15),
-        inset 0 0 30px rgba(255, 228, 214, 0.05);
+        0 0 40px rgba(255, 228, 214, 0.08),
+        inset 0 0 20px rgba(255, 228, 214, 0.05);
     z-index: 2;
 }
 
-/* Título con luz tipo vitral */
-.title-container {
-    position: relative;
-    display: inline-block;
-    z-index: 2;
-}
-
+/* Título con luz elegante */
 h1 {
     font-family: 'Parfumerie Script Pro', cursive;
     font-size: 6rem;
     color: #ffe8d6;
     letter-spacing: 2px;
     text-shadow:
-        0 0 20px rgba(255, 255, 255, 0.4),
-        0 0 40px rgba(255, 228, 214, 0.25),
-        0 0 60px rgba(255, 200, 180, 0.3),
-        0 0 100px rgba(198,167,94,0.2);
+        0 0 15px rgba(255, 228, 214, 0.25),
+        0 0 30px rgba(255, 228, 214, 0.15);
     margin-bottom: 1rem;
     animation: fadeIn 2s forwards;
     position: relative;
     z-index: 2;
 }
 
-/* Destellos animados sobre el título */
+/* Destellos sobre el título */
 .light-flares {
     position: absolute;
     top: 0;
@@ -96,16 +85,7 @@ h1 {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,228,214,0) 60%);
-    mix-blend-mode: screen;
-    animation: flareMove 3s infinite alternate;
     z-index: 3;
-}
-
-@keyframes flareMove {
-    0% { transform: translate(-20%, -10%) scale(1); opacity: 0.6; }
-    50% { transform: translate(20%, 10%) scale(1.2); opacity: 0.8; }
-    100% { transform: translate(-20%, -10%) scale(1); opacity: 0.6; }
 }
 
 /* Texto introductorio */
@@ -114,19 +94,19 @@ h1 {
     margin-bottom: 2rem;
     line-height: 1.6;
     color: #fff5ee;
-    text-shadow: 0 0 12px rgba(0,0,0,0.6);
+    text-shadow: 0 0 8px rgba(0,0,0,0.4); /* sombra más suave */
     animation: fadeIn 2s forwards;
     animation-delay: 1s;
 }
 
-/* Contador elegante */
+/* Contador elegante sin franjas ni bordes feos */
 .countdown p {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     font-family: 'Marcellus', serif;
     letter-spacing: 3px;
     color: #C6A75E;
-    text-shadow: 0 0 15px rgba(198,167,94,0.5);
+    text-shadow: 0 0 12px rgba(198,167,94,0.3);
 }
 
 .timer {
@@ -137,9 +117,15 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    text-shadow: 0 0 20px rgba(255,255,255,0.3);
+    text-shadow: 0 0 12px rgba(255,255,255,0.25);
     animation: fadeIn 2s forwards;
     animation-delay: 2s;
+}
+
+.timer span {
+    background: rgba(255, 228, 214, 0.05); /* sutil franja dorada */
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.5rem;
 }
 
 /* Botón elegante */
@@ -148,7 +134,7 @@ h1 {
     padding: 14px 35px;
     background: transparent;
     color: #C6A75E;
-    border: 1px solid #C6A75E;
+    border: 1px solid rgba(198,167,94,0.6);
     cursor: pointer;
     font-family: 'Marcellus', serif;
     font-size: 0.9rem;
@@ -158,7 +144,7 @@ h1 {
 }
 
 #enterBtn:hover {
-    background: #C6A75E;
+    background: rgba(198,167,94,0.25);
     color: black;
     transform: scale(1.05);
 }

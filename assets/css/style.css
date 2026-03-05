@@ -5,12 +5,11 @@
 /* Perfumerie Script Pro: solo si tienes el archivo local */
 @font-face {
     font-family: 'Perfumerie Script Pro';
-    src: url('../fonts/PerfumerieScriptPro.woff2') format('woff2'),
-         url('../fonts/PerfumerieScriptPro.woff') format('woff');
+    src: url('assets/fonts/PerfumerieScriptPro-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-  }
-  
+}
+
   /* ===================================
      ESTILOS GENERALES
   =================================== */
@@ -38,13 +37,12 @@
      TÍTULO / NOMBRES
   =================================== */
   h1 {
-    font-family: 'Perfumerie Script Pro', cursive; /* Elegante y romántico */
-    font-size: 4rem;
-    color: #F5F3EF;
-    margin-bottom: 30px;
-    line-height: 1.2;
+    font-family: 'Perfumerie Script Pro', cursive;
+    font-size: 3rem; 
+    color: #4B2E83;
+    text-align: center;
   }
-  
+
   /* ===================================
      CUENTA REGRESIVA
   =================================== */

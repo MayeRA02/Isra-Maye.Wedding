@@ -38,8 +38,8 @@ body {
 =================================== */
 h1 {
     font-family: 'Parfumerie Script Pro', cursive;
-    font-weight: 300; /* más fino */
-    font-size: 10rem;       /* tamaño grande desktop */
+    font-weight: 250; /* más fino */
+    font-size: 9rem;       /* tamaño grande desktop */
     color: #ffffff;       
     text-align: center;
     margin-bottom: 20px;

@@ -1,6 +1,5 @@
-/* ===================================
-   CARGA DE FUENTES
-=================================== */
+
+
 
 /* Perfumerie Script Pro: solo si tienes el archivo local */
 @font-face {
@@ -10,68 +9,140 @@
     font-style: normal;
 }
 
+/* Fuentes adicionales */
+@font-face {
+    font-family: 'Marcellus';
+    src: url('../fonts/Marcellus-Regular.ttf') format('truetype');
+}
+
 /* ===================================
    ESTILOS GENERALES
 =================================== */
-body {
-    margin: 0;
-    background: #000000;
-    color: #F5F3EF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif; /* Fuente para párrafos */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body, html {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    background: #000;
+    color: #fff;
 }
 
-/* ===================================
-   CONTENEDOR
-=================================== */
+/* Contenedor principal */
 .container {
-    max-width: 700px;
-    padding: 20px;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: url('../images/iglesia-blur.jpg') center center/cover no-repeat;
 }
 
-/* ===================================
-   TÍTULO / NOMBRES
-=================================== */
+/* Canvas de partículas bokeh */
+#bokeh {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Overlay elegante con marco dorado y gradiente */
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 3rem 4rem;
+    border-radius: 2rem;
+    border: 2px solid rgba(198,167,94,0.3);
+    background: rgba(0,0,0,0.45) radial-gradient(circle at top left, rgba(198,167,94,0.05), rgba(0,0,0,0.45));
+    box-shadow:
+        0 0 60px rgba(198,167,94,0.2),
+        0 0 120px rgba(255, 228, 214, 0.15),
+        inset 0 0 30px rgba(255, 228, 214, 0.05);
+    z-index: 2;
+}
+
+/* Título con luz tipo vitral */
+.title-container {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+}
+
 h1 {
     font-family: 'Parfumerie Script Pro', cursive;
-    font-weight: 250; /* más fino */
-    font-size: 9rem;       /* tamaño grande desktop */
-    color: #ffffff;       
-    text-align: center;
-    margin-bottom: 20px;
-    letter-spacing: -1px; /* o -0.5px según se vea */
+    font-size: 6rem;
+    color: #ffe8d6;
+    letter-spacing: 2px;
+    text-shadow:
+        0 0 20px rgba(255, 255, 255, 0.4),
+        0 0 40px rgba(255, 228, 214, 0.25),
+        0 0 60px rgba(255, 200, 180, 0.3),
+        0 0 100px rgba(198,167,94,0.2);
+    margin-bottom: 1rem;
+    animation: fadeIn 2s forwards;
+    position: relative;
+    z-index: 2;
 }
 
-/* ===================================
-   CUENTA REGRESIVA
-=================================== */
-#countdown {
+/* Destellos animados sobre el título */
+.light-flares {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,228,214,0) 60%);
+    mix-blend-mode: screen;
+    animation: flareMove 3s infinite alternate;
+    z-index: 3;
+}
+
+@keyframes flareMove {
+    0% { transform: translate(-20%, -10%) scale(1); opacity: 0.6; }
+    50% { transform: translate(20%, 10%) scale(1.2); opacity: 0.8; }
+    100% { transform: translate(-20%, -10%) scale(1); opacity: 0.6; }
+}
+
+/* Texto introductorio */
+.intro-text {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #fff5ee;
+    text-shadow: 0 0 12px rgba(0,0,0,0.6);
+    animation: fadeIn 2s forwards;
+    animation-delay: 1s;
+}
+
+/* Contador elegante */
+.countdown p {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
     font-family: 'Marcellus', serif;
-    font-size: 1.4rem;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     color: #C6A75E;
-    margin-bottom: 40px;
+    text-shadow: 0 0 15px rgba(198,167,94,0.5);
 }
 
-/* ===================================
-   MENSAJE
-=================================== */
-.message {
-    font-family: 'Montserrat', sans-serif; 
-    font-size: 1rem;
-    line-height: 1.8;
-    opacity: 0.85;
-    max-width: 600px;
-    margin: 0 auto;
+.timer {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #ffd1d1;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    text-shadow: 0 0 20px rgba(255,255,255,0.3);
+    animation: fadeIn 2s forwards;
+    animation-delay: 2s;
 }
 
-/* ===================================
-   BOTÓN
-=================================== */
+/* Botón elegante */
 #enterBtn {
     margin-top: 50px;
     padding: 14px 35px;
@@ -92,36 +163,18 @@ h1 {
     transform: scale(1.05);
 }
 
-/* ===================================
-   RESPONSIVE / MÓVILES
-=================================== */
-@media screen and (max-width: 768px) {
-    h1 {
-        font-size: 4.5rem;  /* más pequeño tablet */
-    }
+/* Animaciones generales */
+@keyframes fadeIn { to { opacity: 1; } }
 
-    #countdown {
-        font-size: 1.3rem;
-        letter-spacing: 3px;
-    }
+/* Responsive */
+@media screen and (max-width: 768px) {
+    h1 { font-size: 4.5rem; }
+    .timer { font-size: 1.8rem; }
 }
 
 @media screen and (max-width: 480px) {
-    h1 {
-        font-size: 3rem;  /* más pequeño móvil */
-    }
-
-    #countdown {
-        font-size: 1.2rem;
-        letter-spacing: 2px;
-    }
-
-    .message {
-        font-size: 0.95rem;
-    }
-
-    #enterBtn {
-        padding: 12px 28px;
-        font-size: 0.85rem;
-    }
+    h1 { font-size: 3rem; }
+    .timer { font-size: 1.5rem; }
+    .intro-text { font-size: 1.1rem; }
+    #enterBtn { padding: 12px 28px; font-size: 0.85rem; }
 }
